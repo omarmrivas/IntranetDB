@@ -94,10 +94,10 @@ let main argv =
                                              for carrera in carreras do
                                                  let (alumnos, user) = Alumnos.obtener_alumnos user (carrera, periodo)
                                                  Array.iter DB.actualiza_alumno alumnos
-(*                                                 let (profesores, user) = Profesores.obtener_profesores user (carrera, periodo)
+                                                 let (profesores, user) = Profesores.obtener_profesores user (carrera, periodo)
                                                  Array.iter DB.actualiza_profesor profesores
                                                  let (materias, user) = Kardex.obtener_kardex user (carrera, periodo)
-                                                 Array.iter DB.actualiza_kardex materias*)
+                                                 Array.iter DB.actualiza_kardex materias
                           | None -> printfn "Error en registro (usuario o contraseña invalidos)"
                     else printfn "Saliendo"
       | "train"  -> printf "Carrera: "

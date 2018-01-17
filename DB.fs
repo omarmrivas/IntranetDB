@@ -7,7 +7,7 @@ open Types
 // Add references to System.Data and System.Data.Linq.
 
 [<Literal>]
-let connectionString = @"Server=localhost,1401; User ID=SA; Password=HolaMund0!; Database=Intranet"
+let connectionString = @"Server=localhost,1433; User ID=SA; Password=HolaMund0!; Database=Intranet"
 
 [<Literal>]
 let dbVendor = Common.DatabaseProviderTypes.MSSQLSERVER
