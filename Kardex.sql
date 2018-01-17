@@ -1,0 +1,20 @@
+﻿CREATE TABLE Intranet.dbo.Kardex (
+    matricula nchar(6) NOT NULL,
+    grupo nchar(7) NOT NULL,
+    materia nvarchar(300) NOT NULL,
+    periodo int NOT NULL,
+    carrera nvarchar(5) NOT NULL,
+    c1 float,
+    i1 int,
+    c2 float,
+    i2 int,
+    c3 float,
+    i3 int,
+    efinal float,
+    [final] float,
+    inasistencias int,
+    extraordinario float,
+    regularizacion float,
+    estatus nvarchar(20),
+    CONSTRAINT Kardex_PK PRIMARY KEY (matricula,grupo)
+) go
