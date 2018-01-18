@@ -69,7 +69,7 @@ let cal_to_float cal =
 let periodo_to_int (periodo : string) =
     let sem = periodo.Substring(4).Remove(1)
     let year = periodo.Remove(4)
-    (int year - 2001) * 3 + int sem
+    (int year - 2001) * 3 + int sem - 1
 
 
 type kardex_in = 
