@@ -7,11 +7,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>IntranetDB</RootNamespace>
     <AssemblyName>IntranetDB</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
@@ -53,7 +52,7 @@
       <HintPath>packages\SQLProvider.1.1.45\lib\net451\FSharp.Data.SqlProvider.dll</HintPath>
     </Reference>
     <Reference Include="System.ValueTuple">
-      <HintPath>packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

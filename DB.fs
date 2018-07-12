@@ -30,7 +30,13 @@ let actualiza_alumno (alumno : Alumno) =
                          where (registro.Matricula = alumno.matricula && registro.Periodo = Types.periodo_to_int alumno.periodo)
                          select (registro) }
     let registro = match Seq.tryHead result with
-                        Some registro -> registro
+                        Some registro -> //registro
+                                         registro.Delete()
+                                         ctx.SubmitUpdates()
+                                         let registro = ctx.Dbo.Alumnos.Create()
+                                         registro.Matricula <- alumno.matricula
+                                         registro.Periodo <- Types.periodo_to_int alumno.periodo
+                                         registro
                       | None -> let registro = ctx.Dbo.Alumnos.Create()
                                 registro.Matricula <- alumno.matricula
                                 registro.Periodo <- Types.periodo_to_int alumno.periodo
