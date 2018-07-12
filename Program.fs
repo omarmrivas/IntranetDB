@@ -100,7 +100,7 @@ let main argv =
                                                  Array.iter DB.actualiza_kardex materias
                           | None -> printfn "Error en registro (usuario o contraseña invalidos)"
                     else printfn "Saliendo"
-      | "train"  -> printf "Carrera: "
+(*      | "train"  -> printf "Carrera: "
                     let carrera = System.Console.ReadLine ()
                     printf "Periodo: "
                     let periodo = System.Console.ReadLine ()
@@ -112,7 +112,7 @@ let main argv =
                                                                 (Types.periodo_to_int "20171S") "Análisis y Diseño de Algoritmos" "ITI"
                          List.iter (printfn "%A") resultado
                          printfn "%i" (List.length resultado)
-                    else printfn "Saliendo"
+                    else printfn "Saliendo"*)
       | _ -> printfn "Comando no reconocido"
 
     0 // return an integer exit code

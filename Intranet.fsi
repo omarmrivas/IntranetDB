@@ -26,6 +26,8 @@ val getUserType  : UserData -> string
 
 val getCookie    : UserData -> CookieContainer
 
+val newUser      : UserData -> UserData
+
 val changeCookie : UserData -> CookieContainer -> UserData
 
 val login : string -> string -> UserData option

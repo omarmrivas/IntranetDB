@@ -66,6 +66,7 @@ let extraerInfo (info : string) =
                ("", "")
 
 let obtener_profesores user (plan, periodo) =
+//    let user = Intranet.newUser user
     let url = @"http://intranet.upslp.edu.mx:9080/Users/periodo.do"
     let parameters = 
         [("6578706f7274","1")

@@ -115,6 +115,11 @@ let newCookie user =
         Some user -> Some (getCookie user)
       | None      -> None
 
+let rec newUser user =
+    match login (getUserName user) (getPassword user) with
+        Some user -> user
+      | None      -> failwith "Login failed!"
+
 let rec recursive_timeout time f v =
     try
         let tokenSource = new System.Threading.CancellationTokenSource()

@@ -112,6 +112,7 @@ let obtener_estatus final extra regu =
 
 let obtener_kardex user (carrera, periodo) =
     printfn "Actualizando el kardex de la carrera %s en el periodo %s..." carrera periodo
+//    let user = Intranet.newUser user
     let url = @"http://intranet.upslp.edu.mx:9080/Users/kardex.do"
     let parameters =
         [("6578706f7274","1")

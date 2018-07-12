@@ -7,7 +7,8 @@ open Types
 // Add references to System.Data and System.Data.Linq.
 
 [<Literal>]
-let connectionString = @"Server=localhost,1433; User ID=SA; Password=HolaMund0!; Database=Intranet"
+let connectionString = @"Server=192.168.2.239,1433; User ID=SA; Password=HolaMund0!; Database=Intranet"
+//let connectionString = @"Server=localhost,1401; User ID=SA; Password=HolaMund0!; Database=Intranet"
 
 [<Literal>]
 let dbVendor = Common.DatabaseProviderTypes.MSSQLSERVER
@@ -94,12 +95,12 @@ let actualiza_kardex (kardex : kardex) =
     registro.Estatus <- kardex.estatus
     ctx.SubmitUpdates()
 
-let datos_entrenamiento periodoInicial periodoFinal materia carrera =
+(*let datos_entrenamiento periodoInicial periodoFinal materia carrera =
     let ctx = sql.GetDataContext()
     ctx.Procedures.DatosEntrenamiento.Invoke(periodoInicial, periodoFinal, materia, carrera).ResultSet
         |> Seq.map (fun r -> r.MapTo<Types.kardex_in>())
         |> Seq.distinctBy (fun k -> (k.matricula, k.materia))
-        |> Seq.toList
+        |> Seq.toList*)
 
 
 (* SQL Not supported! *)

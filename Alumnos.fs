@@ -57,6 +57,7 @@ let TablaAlumnos = """
 type Alumnos = XmlProvider<TablaAlumnos>
 
 let obtener_alumnos user (carrera, periodo) = 
+//    let user = Intranet.newUser user
     printfn "Actualizando Alumnos de la carrera %s en el periodo %s..." carrera periodo
     let url = @"http://intranet.upslp.edu.mx:9080/Users/periodo.do"
     let parameters =
